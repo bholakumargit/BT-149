@@ -1,0 +1,239 @@
+{
+  "generated_at": "2026-10-19T12:41:25.754315+00:00",
+  "dataset_family": "MalDroid-2020",
+  "seed": 42,
+  "split_strategy": "Stratified 80/10/10 splits; identical feature vectors are grouped to prevent cross-split leakage. Exact feature vectors assigned conflicting labels are excluded.",
+  "device": "cpu",
+  "models": {
+    "syscalls": {
+      "dataset": "feature_vectors_syscalls_frequency_5_Cat.csv",
+      "feature_count": 139,
+      "class_names": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "class_counts": {
+        "1": 1251,
+        "2": 2080,
+        "3": 3903,
+        "4": 2534,
+        "5": 1791
+      },
+      "rows_excluded_for_conflicting_duplicate_labels": 39,
+      "split_sizes": {
+        "train": 9247,
+        "validation": 1156,
+        "test": 1156
+      },
+      "metrics": {
+        "accuracy": 0.8581314878892734,
+        "precision_macro": 0.8332202032951106,
+        "recall_macro": 0.8383030303030303,
+        "f1_macro": 0.8336396341508584,
+        "f1_weighted": 0.8584107047921377,
+        "confusion_matrix": [
+          [
+            105,
+            10,
+            1,
+            2,
+            7
+          ],
+          [
+            20,
+            160,
+            14,
+            9,
+            5
+          ],
+          [
+            6,
+            3,
+            376,
+            5,
+            0
+          ],
+          [
+            9,
+            18,
+            6,
+            207,
+            13
+          ],
+          [
+            13,
+            8,
+            5,
+            10,
+            144
+          ]
+        ],
+        "classification_report": {
+          "1": {
+            "precision": 0.6862745098039216,
+            "recall": 0.84,
+            "f1-score": 0.7553956834532374,
+            "support": 125.0
+          },
+          "2": {
+            "precision": 0.8040201005025126,
+            "recall": 0.7692307692307693,
+            "f1-score": 0.7862407862407862,
+            "support": 208.0
+          },
+          "3": {
+            "precision": 0.9353233830845771,
+            "recall": 0.9641025641025641,
+            "f1-score": 0.9494949494949495,
+            "support": 390.0
+          },
+          "4": {
+            "precision": 0.8884120171673819,
+            "recall": 0.8181818181818182,
+            "f1-score": 0.8518518518518519,
+            "support": 253.0
+          },
+          "5": {
+            "precision": 0.8520710059171598,
+            "recall": 0.8,
+            "f1-score": 0.8252148997134671,
+            "support": 180.0
+          },
+          "accuracy": 0.8581314878892734,
+          "macro avg": {
+            "precision": 0.8332202032951106,
+            "recall": 0.8383030303030303,
+            "f1-score": 0.8336396341508584,
+            "support": 1156.0
+          },
+          "weighted avg": {
+            "precision": 0.8615377469216561,
+            "recall": 0.8581314878892734,
+            "f1-score": 0.8584107047921377,
+            "support": 1156.0
+          }
+        }
+      },
+      "epochs_trained": 40,
+      "model_file": "maldroid_syscalls_model.pt"
+    },
+    "syscalls_binders": {
+      "dataset": "feature_vectors_syscallsbinders_frequency_5_Cat.csv",
+      "feature_count": 470,
+      "class_names": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "class_counts": {
+        "1": 1251,
+        "2": 2080,
+        "3": 3903,
+        "4": 2534,
+        "5": 1791
+      },
+      "rows_excluded_for_conflicting_duplicate_labels": 39,
+      "split_sizes": {
+        "train": 9247,
+        "validation": 1156,
+        "test": 1156
+      },
+      "metrics": {
+        "accuracy": 0.6859861591695502,
+        "precision_macro": 0.6806248310659033,
+        "recall_macro": 0.6506840057433732,
+        "f1_macro": 0.647391306383228,
+        "f1_weighted": 0.6843661548625042,
+        "confusion_matrix": [
+          [
+            68,
+            25,
+            14,
+            5,
+            13
+          ],
+          [
+            34,
+            130,
+            32,
+            9,
+            3
+          ],
+          [
+            6,
+            32,
+            349,
+            0,
+            3
+          ],
+          [
+            39,
+            58,
+            37,
+            112,
+            8
+          ],
+          [
+            21,
+            9,
+            12,
+            3,
+            134
+          ]
+        ],
+        "classification_report": {
+          "1": {
+            "precision": 0.40476190476190477,
+            "recall": 0.544,
+            "f1-score": 0.4641638225255973,
+            "support": 125.0
+          },
+          "2": {
+            "precision": 0.5118110236220472,
+            "recall": 0.625,
+            "f1-score": 0.5627705627705628,
+            "support": 208.0
+          },
+          "3": {
+            "precision": 0.786036036036036,
+            "recall": 0.8948717948717949,
+            "f1-score": 0.8369304556354916,
+            "support": 390.0
+          },
+          "4": {
+            "precision": 0.8682170542635659,
+            "recall": 0.4409448818897638,
+            "f1-score": 0.5848563968668408,
+            "support": 254.0
+          },
+          "5": {
+            "precision": 0.8322981366459627,
+            "recall": 0.7486033519553073,
+            "f1-score": 0.788235294117647,
+            "support": 179.0
+          },
+          "accuracy": 0.6859861591695502,
+          "macro avg": {
+            "precision": 0.6806248310659033,
+            "recall": 0.6506840057433732,
+            "f1-score": 0.647391306383228,
+            "support": 1156.0
+          },
+          "weighted avg": {
+            "precision": 0.7206872692951999,
+            "recall": 0.6859861591695502,
+            "f1-score": 0.6843661548625042,
+            "support": 1156.0
+          }
+        }
+      },
+      "epochs_trained": 8,
+      "model_file": "maldroid_syscalls_binders_model.pt"
+    }
+  }
+}

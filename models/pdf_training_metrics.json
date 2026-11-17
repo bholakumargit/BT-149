@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-10-25T16:59:47.380499+00:00",
+  "dataset": "PDFMalware2022.csv",
+  "dataset_family": "CIC-Evasive-PDFMal2022",
+  "rows": 10024,
+  "feature_count": 24,
+  "classes": [
+    "Benign",
+    "Malware"
+  ],
+  "class_counts": {
+    "Benign": 4468,
+    "Malware": 5556
+  },
+  "split_sizes": {
+    "train": 8019,
+    "validation": 1002,
+    "test": 1003
+  },
+  "seed": 42,
+  "deployment": {
+    "model": "lightgbm",
+    "model_file": "pdf_lightgbm.txt",
+    "threshold": 0.5
+  },
+  "models": {
+    "lightgbm": {
+      "model_file": "pdf_lightgbm.txt",
+      "best_iteration": 122,
+      "metrics": {
+        "accuracy": 0.9890329012961117,
+        "precision_macro": 0.9886055856941933,
+        "recall_macro": 0.9892307630405742,
+        "f1_macro": 0.9889090274866728,
+        "f1_weighted": 0.9890364071586428,
+        "roc_auc": 0.9996418972204787,
+        "confusion_matrix": [
+          [
+            443,
+            4
+          ],
+          [
+            7,
+            549
+          ]
+        ],
+        "classification_report": {
+          "Benign": {
+            "precision": 0.9844444444444445,
+            "recall": 0.9910514541387024,
+            "f1-score": 0.987736900780379,
+            "support": 447.0
+          },
+          "Malware": {
+            "precision": 0.9927667269439421,
+            "recall": 0.987410071942446,
+            "f1-score": 0.9900811541929666,
+            "support": 556.0
+          },
+          "accuracy": 0.9890329012961117,
+          "macro avg": {
+            "precision": 0.9886055856941933,
+            "recall": 0.9892307630405742,
+            "f1-score": 0.9889090274866728,
+            "support": 1003.0
+          },
+          "weighted avg": {
+            "precision": 0.9890577934670972,
+            "recall": 0.9890329012961117,
+            "f1-score": 0.9890364071586428,
+            "support": 1003.0
+          }
+        },
+        "threshold": 0.5
+      },
+      "top_gain_features": [
+        {
+          "feature": "Javascript",
+          "importance": 54237.67581103742
+        },
+        {
+          "feature": "pdfsize",
+          "importance": 15407.554401832633
+        },
+        {
+          "feature": "obj",
+          "importance": 12536.318394990405
+        },
+        {
+          "feature": "JS",
+          "importance": 8353.79690772295
+        },
+        {
+          "feature": "XFA",
+          "importance": 6824.693971669301
+        },
+        {
+          "feature": "text",
+          "importance": 3540.620123135159
+        },
+        {
+          "feature": "stream",
+          "importance": 2582.3773014089093
+        },
+        {
+          "feature": "endobj",
+          "importance": 1834.0818162858486
+        },
+        {
+          "feature": "images",
+          "importance": 1794.2280813166872
+        },
+        {
+          "feature": "xref",
+          "importance": 1321.9035671101883
+        },
+        {
+          "feature": "pages",
+          "importance": 1270.53959133639
+        },
+        {
+          "feature": "endstream",
+          "importance": 1011.3734124973416
+        },
+        {
+          "feature": "Acroform",
+          "importance": 1010.1337743196636
+        },
+        {
+          "feature": "OpenAction",
+          "importance": 463.7437960933894
+        },
+        {
+          "feature": "embedded files",
+          "importance": 308.8601513952017
+        }
+      ]
+    }
+  },
+  "license": "license not verified",
+  "split_strategy": "Stratified 80/10/10 train/validation/test split.",
+  "feature_source": "pdfid-style static features re-extracted from the PDF bytes at inference time; columns that the byte-level extractor cannot reproduce (metadata size, xref Length) are excluded from the model."
+}

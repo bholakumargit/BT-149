@@ -1,0 +1,5 @@
+# Install this only when training the deep-learning models.
+-r requirements.txt
+torch>=2.2
+lightgbm>=4.5
+shap>=0.46

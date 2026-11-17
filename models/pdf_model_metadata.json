@@ -1,0 +1,40 @@
+{
+  "dataset": "CIC-Evasive-PDFMal2022",
+  "source_dataset": "PDFMalware2022.csv",
+  "deployment_model": "lightgbm",
+  "model_file": "pdf_lightgbm.txt",
+  "feature_names": [
+    "pdfsize",
+    "pages",
+    "isEncrypted",
+    "embedded files",
+    "images",
+    "text",
+    "obj",
+    "endobj",
+    "stream",
+    "endstream",
+    "xref",
+    "trailer",
+    "encrypt",
+    "ObjStm",
+    "JS",
+    "Javascript",
+    "AA",
+    "OpenAction",
+    "Acroform",
+    "JBIG2Decode",
+    "RichMedia",
+    "launch",
+    "EmbeddedFile",
+    "XFA"
+  ],
+  "class_names": [
+    "Benign",
+    "Malware"
+  ],
+  "positive_class": "Malware",
+  "threshold": 0.5,
+  "trained_at": "2026-10-25T16:59:47.380499+00:00",
+  "license": "license not verified"
+}

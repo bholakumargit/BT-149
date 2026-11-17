@@ -1,0 +1,259 @@
+{
+  "generated_at": "2026-10-25T15:32:48.714734+00:00",
+  "dataset": "apk_drebin_clean.csv",
+  "dataset_family": "Drebin-215",
+  "rows": 7255,
+  "feature_count": 215,
+  "classes": [
+    "Benign",
+    "Malware"
+  ],
+  "class_counts": {
+    "Benign": 5537,
+    "Malware": 1718
+  },
+  "split_sizes": {
+    "train": 5803,
+    "validation": 726,
+    "test": 726
+  },
+  "seed": 42,
+  "selection_metric": "f1_macro",
+  "deployment": {
+    "model": "lightgbm",
+    "model_file": "apk_lightgbm.txt",
+    "threshold": 0.5
+  },
+  "models": {
+    "lightgbm": {
+      "model_file": "apk_lightgbm.txt",
+      "best_iteration": 302,
+      "metrics": {
+        "accuracy": 0.977961432506887,
+        "precision_macro": 0.9661363636363637,
+        "recall_macro": 0.973532868776761,
+        "f1_macro": 0.9697651174412794,
+        "f1_weighted": 0.9780481659996448,
+        "roc_auc": 0.997250440769037,
+        "confusion_matrix": [
+          [
+            544,
+            10
+          ],
+          [
+            6,
+            166
+          ]
+        ],
+        "classification_report": {
+          "Benign": {
+            "precision": 0.9890909090909091,
+            "recall": 0.9819494584837545,
+            "f1-score": 0.9855072463768116,
+            "support": 554.0
+          },
+          "Malware": {
+            "precision": 0.9431818181818182,
+            "recall": 0.9651162790697675,
+            "f1-score": 0.9540229885057471,
+            "support": 172.0
+          },
+          "accuracy": 0.977961432506887,
+          "macro avg": {
+            "precision": 0.9661363636363637,
+            "recall": 0.973532868776761,
+            "f1-score": 0.9697651174412794,
+            "support": 726.0
+          },
+          "weighted avg": {
+            "precision": 0.978214375156524,
+            "recall": 0.977961432506887,
+            "f1-score": 0.9780481659996448,
+            "support": 726.0
+          }
+        },
+        "threshold": 0.5
+      },
+      "top_gain_features": [
+        {
+          "feature": "transact",
+          "importance": 17759.033861741424
+        },
+        {
+          "feature": "onServiceConnected",
+          "importance": 8539.774188369513
+        },
+        {
+          "feature": "READ_PHONE_STATE",
+          "importance": 6677.212748080492
+        },
+        {
+          "feature": "SEND_SMS",
+          "importance": 4742.2493655234575
+        },
+        {
+          "feature": "TelephonyManager.getDeviceId",
+          "importance": 3576.24843031168
+        },
+        {
+          "feature": "Ljava.lang.Class.getCanonicalName",
+          "importance": 2800.324872970581
+        },
+        {
+          "feature": "chmod",
+          "importance": 2375.490935176611
+        },
+        {
+          "feature": "android.telephony.gsm.SmsManager",
+          "importance": 1323.081835359335
+        },
+        {
+          "feature": "WRITE_HISTORY_BOOKMARKS",
+          "importance": 1319.8854037374258
+        },
+        {
+          "feature": "TelephonyManager.getSubscriberId",
+          "importance": 1299.3830104321241
+        },
+        {
+          "feature": "TelephonyManager.getLine1Number",
+          "importance": 1223.7221282869577
+        },
+        {
+          "feature": "Ljava.net.URLDecoder",
+          "importance": 1146.2294861525297
+        },
+        {
+          "feature": "Ljava.lang.Class.cast",
+          "importance": 1130.3767091929913
+        },
+        {
+          "feature": "ClassLoader",
+          "importance": 1063.0386342406273
+        },
+        {
+          "feature": "GET_ACCOUNTS",
+          "importance": 999.7042842060328
+        }
+      ],
+      "shap": {
+        "status": "ok",
+        "sample_rows": 200,
+        "top_mean_absolute_features": [
+          {
+            "feature": "WRITE_HISTORY_BOOKMARKS",
+            "importance": 0.8033976200043986
+          },
+          {
+            "feature": "transact",
+            "importance": 0.7162290828736598
+          },
+          {
+            "feature": "TelephonyManager.getDeviceId",
+            "importance": 0.6362316445952255
+          },
+          {
+            "feature": "TelephonyManager.getLine1Number",
+            "importance": 0.6045424965352323
+          },
+          {
+            "feature": "onServiceConnected",
+            "importance": 0.6027366912618892
+          },
+          {
+            "feature": "Ljava.lang.Class.getCanonicalName",
+            "importance": 0.6002832109242912
+          },
+          {
+            "feature": "SEND_SMS",
+            "importance": 0.5696943315482609
+          },
+          {
+            "feature": "ClassLoader",
+            "importance": 0.5141539727067937
+          },
+          {
+            "feature": "READ_PHONE_STATE",
+            "importance": 0.49016156978774456
+          },
+          {
+            "feature": "Ljava.lang.Class.getResource",
+            "importance": 0.47853878787591725
+          },
+          {
+            "feature": "TelephonyManager.getSubscriberId",
+            "importance": 0.4722701950296689
+          },
+          {
+            "feature": "android.intent.action.BOOT_COMPLETED",
+            "importance": 0.4560973076465587
+          },
+          {
+            "feature": "Ljava.lang.Class.getMethods",
+            "importance": 0.45507134418546014
+          },
+          {
+            "feature": "chmod",
+            "importance": 0.39737326855987953
+          },
+          {
+            "feature": "Runtime.exec",
+            "importance": 0.37975210195949366
+          }
+        ]
+      }
+    },
+    "mlp": {
+      "model_file": "apk_mlp.pt",
+      "epochs_trained": 12,
+      "metrics": {
+        "accuracy": 0.9628099173553719,
+        "precision_macro": 0.9394764450217314,
+        "recall_macro": 0.9616006212744522,
+        "f1_macro": 0.9498561068262922,
+        "f1_weighted": 0.9632662846639843,
+        "roc_auc": 0.9913630257744942,
+        "confusion_matrix": [
+          [
+            534,
+            20
+          ],
+          [
+            7,
+            165
+          ]
+        ],
+        "classification_report": {
+          "Benign": {
+            "precision": 0.9870609981515711,
+            "recall": 0.9638989169675091,
+            "f1-score": 0.9753424657534246,
+            "support": 554.0
+          },
+          "Malware": {
+            "precision": 0.8918918918918919,
+            "recall": 0.9593023255813954,
+            "f1-score": 0.9243697478991597,
+            "support": 172.0
+          },
+          "accuracy": 0.9628099173553719,
+          "macro avg": {
+            "precision": 0.9394764450217314,
+            "recall": 0.9616006212744522,
+            "f1-score": 0.9498561068262922,
+            "support": 726.0
+          },
+          "weighted avg": {
+            "precision": 0.964514047357267,
+            "recall": 0.9628099173553719,
+            "f1-score": 0.9632662846639843,
+            "support": 726.0
+          }
+        },
+        "threshold": 0.5
+      }
+    }
+  },
+  "license": "license not verified",
+  "split_strategy": "Stratified 80/10/10 split with identical feature vectors grouped so they cannot cross splits."
+}
